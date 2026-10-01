@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "corpus": "ARDIP-Bench-Lite v1",
+    "generated_at": "2026-10-01T08:45:46",
+    "eval_mode": "fast-checkpoint",
+    "n_registry": 1204,
+    "n_transforms": 13851,
+    "n_forgeries": 32,
+    "overlay": true,
+    "note": "60% stratified sample of 23,051 records; aggregated from checkpoint",
+    "splits": {
+      "train": 722,
+      "val": 241,
+      "test": 241
+    },
+    "fusion_weights": {
+      "cos": -0.505,
+      "sips": 0.091,
+      "bsr": 4.92,
+      "jac": -4.028
+    },
+    "thresholds": {
+      "cos_thr": 0.959,
+      "bsr_thr": 0.167,
+      "p_thr": 0.5
+    }
+  },
+  "test_metrics": {
+    "ORA_all": 0.835,
+    "ORA_by_family": {
+      "human_edit": 1.0,
+      "paraphrase": 0.929,
+      "summarize_50": 0.875,
+      "translate_es": 0.307,
+      "rewrite_lay": 0.745,
+      "regenerate": 0.788,
+      "translate_es+back_en": 0.989,
+      "paraphrase+summarize_50": 0.919
+    },
+    "ORA_hash_baseline": 0.003,
+    "ORA_attested_gateway": 0.962,
+    "ORA_unattested_external": 0.656,
+    "n_attested_test": 1680,
+    "n_unattested_test": 1198,
+    "PVR_chains": 0.808,
+    "SIPS_mean_by_family": {
+      "human_edit": 0.914,
+      "paraphrase": 0.868,
+      "summarize_50": 0.649,
+      "translate_es": 0.362,
+      "rewrite_lay": 0.655,
+      "regenerate": 0.742,
+      "translate_es+back_en": 0.936,
+      "paraphrase+summarize_50": 0.696
+    },
+    "BSR_mean_by_family": {
+      "human_edit": 0.874,
+      "paraphrase": 0.826,
+      "summarize_50": 0.823,
+      "translate_es": 0.584,
+      "rewrite_lay": 0.709,
+      "regenerate": 0.759,
+      "translate_es+back_en": 0.903,
+      "paraphrase+summarize_50": 0.853
+    },
+    "cos_mean_by_family": {
+      "human_edit": 0.977,
+      "paraphrase": 0.95,
+      "summarize_50": 0.908,
+      "translate_es": 0.557,
+      "rewrite_lay": 0.872,
+      "regenerate": 0.909,
+      "translate_es+back_en": 0.965,
+      "paraphrase+summarize_50": 0.915
+    },
+    "FDA": 0.835,
+    "FAR": 0.0,
+    "TSA": 0.999,
+    "AUC_fused": 0.999,
+    "AUC_cosine_alone": 0.52,
+    "latency_p50_s": 0.701,
+    "latency_p95_s": 1.524,
+    "T12_rollback_detection": 0.967
+  },
+  "overlays": {
+    "T6_scrub": {
+      "n": 30,
+      "ORA_at_depth2": 0.267,
+      "BSR_mean": 0.3,
+      "cos_mean": 0.849
+    },
+    "T9_fabrication": {
+      "n": 5,
+      "refused": 5,
+      "cos_mean": 0.623
+    }
+  },
+  "per_family_engine_means": {
+    "human_edit|rule-edit": {
+      "ORA": 1.0,
+      "n": 146
+    },
+    "paraphrase|Phi-3-mini-3.8B": {
+      "ORA": 0.736,
+      "n": 148
+    },
+    "summarize_50|Phi-3-mini-3.8B": {
+      "ORA": 0.75,
+      "n": 144
+    },
+    "paraphrase|DeepSeek-V4-Pro": {
+      "ORA": 0.951,
+      "n": 205
+    },
+    "summarize_50|DeepSeek-V4-Pro": {
+      "ORA": 0.882,
+      "n": 195
+    },
+    "paraphrase|Qwen3.8": {
+      "ORA": 0.98,
+      "n": 147
+    },
+    "summarize_50|Qwen3.8": {
+      "ORA": 0.94,
+      "n": 151
+    },
+    "translate_es|DeepSeek-V4-Pro": {
+      "ORA": 0.241,
+      "n": 54
+    },
+    "rewrite_lay|DeepSeek-V4-Pro": {
+      "ORA": 0.717,
+      "n": 46
+    },
+    "regenerate|DeepSeek-V4-Pro": {
+      "ORA": 0.941,
+      "n": 51
+    },
+    "summarize_50|Kimi-K3": {
+      "ORA": 0.913,
+      "n": 138
+    },
+    "paraphrase|Kimi-K3": {
+      "ORA": 0.994,
+      "n": 158
+    },
+    "summarize_50|GLM": {
+      "ORA": 0.917,
+      "n": 12
+    },
+    "paraphrase|GLM": {
+      "ORA": 0.957,
+      "n": 23
+    },
+    "translate_es|Qwen3.8": {
+      "ORA": 0.333,
+      "n": 42
+    },
+    "regenerate|Qwen3.8": {
+      "ORA": 0.76,
+      "n": 50
+    },
+    "rewrite_lay|Qwen3.8": {
+      "ORA": 0.9,
+      "n": 50
+    },
+    "translate_es+back_en|DeepSeek-V4-Pro": {
+      "ORA": 1.0,
+      "n": 47
+    },
+    "paraphrase+summarize_50|DeepSeek-V4-Pro": {
+      "ORA": 0.939,
+      "n": 49
+    },
+    "paraphrase|GLM-Flash": {
+      "ORA": 0.966,
+      "n": 145
+    },
+    "summarize_50|GLM-Flash": {
+      "ORA": 0.883,
+      "n": 137
+    },
+    "regenerate|GLM-Flash": {
+      "ORA": 0.772,
+      "n": 57
+    },
+    "translate_es|GLM-Flash": {
+      "ORA": 0.304,
+      "n": 46
+    },
+    "rewrite_lay|GLM-Flash": {
+      "ORA": 0.711,
+      "n": 45
+    },
+    "translate_es+back_en|GLM-Flash": {
+      "ORA": 0.98,
+      "n": 51
+    },
+    "paraphrase+summarize_50|GLM-Flash": {
+      "ORA": 0.857,
+      "n": 49
+    },
+    "rewrite_lay|Kimi-K3": {
+      "ORA": 0.778,
+      "n": 54
+    },
+    "regenerate|Kimi-K3": {
+      "ORA": 0.867,
+      "n": 45
+    },
+    "translate_es|Kimi-K3": {
+      "ORA": 0.365,
+      "n": 52
+    },
+    "translate_es+back_en|Kimi-K3": {
+      "ORA": 0.982,
+      "n": 56
+    },
+    "paraphrase+summarize_50|Kimi-K3": {
+      "ORA": 0.944,
+      "n": 54
+    },
+    "paraphrase+summarize_50|Qwen3.8": {
+      "ORA": 0.941,
+      "n": 34
+    },
+    "translate_es+back_en|Qwen3.8": {
+      "ORA": 1.0,
+      "n": 29
+    },
+    "translate_es|Phi-3-mini-3.8B": {
+      "ORA": 0.298,
+      "n": 47
+    },
+    "regenerate|Phi-3-mini-3.8B": {
+      "ORA": 0.596,
+      "n": 47
+    },
+    "rewrite_lay|Phi-3-mini-3.8B": {
+      "ORA": 0.591,
+      "n": 44
+    }
+  }
+}

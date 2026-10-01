@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "corpus": "ARDIP-Bench-Lite v1",
+    "generated_at": "2026-09-29T18:47:51",
+    "n_registry": 1204,
+    "n_transforms": 8615,
+    "n_forgeries": 32,
+    "overlay": false,
+    "splits": {
+      "train": 722,
+      "val": 241,
+      "test": 241
+    },
+    "fusion_weights": {
+      "cos": -0.411,
+      "sips": 0.15,
+      "bsr": 4.509,
+      "jac": -3.383
+    },
+    "thresholds": {
+      "cos_thr": 0.96,
+      "bsr_thr": 0.167,
+      "p_thr": 0.5
+    }
+  },
+  "test_metrics": {
+    "ORA_all": 0.862,
+    "ORA_by_family": {
+      "human_edit": 1.0,
+      "paraphrase": 0.93,
+      "summarize_50": 0.848,
+      "rewrite_lay": 0.702,
+      "regenerate": 0.874,
+      "translate_es": 0.295,
+      "paraphrase+summarize_50": 0.958,
+      "translate_es+back_en": 1.0
+    },
+    "ORA_hash_baseline": 0.009,
+    "ORA_attested_gateway": 0.968,
+    "ORA_unattested_external": 0.711,
+    "n_attested_test": 983,
+    "n_unattested_test": 696,
+    "PVR_chains": 0.818,
+    "SIPS_mean_by_family": {
+      "human_edit": 0.915,
+      "paraphrase": 0.878,
+      "summarize_50": 0.727,
+      "rewrite_lay": 0.708,
+      "regenerate": 0.861,
+      "translate_es": 0.357,
+      "paraphrase+summarize_50": 0.851,
+      "translate_es+back_en": 0.97
+    },
+    "BSR_mean_by_family": {
+      "human_edit": 0.877,
+      "paraphrase": 0.829,
+      "summarize_50": 0.818,
+      "rewrite_lay": 0.692,
+      "regenerate": 0.794,
+      "translate_es": 0.623,
+      "paraphrase+summarize_50": 0.917,
+      "translate_es+back_en": 0.917
+    },
+    "cos_mean_by_family": {
+      "human_edit": 0.977,
+      "paraphrase": 0.952,
+      "summarize_50": 0.929,
+      "rewrite_lay": 0.877,
+      "regenerate": 0.94,
+      "translate_es": 0.555,
+      "paraphrase+summarize_50": 0.942,
+      "translate_es+back_en": 0.964
+    },
+    "FDA": 0.862,
+    "FAR": 0.0,
+    "TSA": 0.999,
+    "AUC_fused": 0.998,
+    "AUC_cosine_alone": 0.661,
+    "latency_p50_s": 0.322,
+    "latency_p95_s": 0.54,
+    "T12_rollback_detection": 0.967
+  },
+  "overlays": {
+    "T6_scrub": {
+      "n": 0,
+      "ORA_at_depth2": null,
+      "BSR_mean": null,
+      "cos_mean": null
+    },
+    "T9_fabrication": {
+      "n": 0,
+      "refused": 0,
+      "cos_mean": null
+    }
+  },
+  "per_family_engine_means": {
+    "human_edit|rule-edit": {
+      "ORA": 1.0,
+      "n": 241
+    },
+    "paraphrase|Phi-3-mini-3.8B": {
+      "ORA": 0.725,
+      "n": 80
+    },
+    "summarize_50|Phi-3-mini-3.8B": {
+      "ORA": 0.625,
+      "n": 80
+    },
+    "summarize_50|DeepSeek-V4-Pro": {
+      "ORA": 0.889,
+      "n": 324
+    },
+    "paraphrase|DeepSeek-V4-Pro": {
+      "ORA": 0.96,
+      "n": 324
+    },
+    "paraphrase|Qwen3.8": {
+      "ORA": 1.0,
+      "n": 52
+    },
+    "summarize_50|Qwen3.8": {
+      "ORA": 0.979,
+      "n": 47
+    },
+    "rewrite_lay|DeepSeek-V4-Pro": {
+      "ORA": 0.663,
+      "n": 83
+    },
+    "regenerate|DeepSeek-V4-Pro": {
+      "ORA": 0.937,
+      "n": 79
+    },
+    "translate_es|DeepSeek-V4-Pro": {
+      "ORA": 0.305,
+      "n": 82
+    },
+    "paraphrase|Kimi-K3": {
+      "ORA": 0.951,
+      "n": 41
+    },
+    "summarize_50|Kimi-K3": {
+      "ORA": 0.78,
+      "n": 41
+    },
+    "paraphrase|GLM": {
+      "ORA": 0.968,
+      "n": 31
+    },
+    "summarize_50|GLM": {
+      "ORA": 0.952,
+      "n": 21
+    },
+    "regenerate|Qwen3.8": {
+      "ORA": 0.5,
+      "n": 14
+    },
+    "rewrite_lay|Qwen3.8": {
+      "ORA": 0.842,
+      "n": 19
+    },
+    "translate_es|Qwen3.8": {
+      "ORA": 0.25,
+      "n": 12
+    },
+    "paraphrase+summarize_50|DeepSeek-V4-Pro": {
+      "ORA": 0.958,
+      "n": 24
+    },
+    "translate_es+back_en|DeepSeek-V4-Pro": {
+      "ORA": 1.0,
+      "n": 20
+    },
+    "paraphrase|GLM-Flash": {
+      "ORA": 0.968,
+      "n": 31
+    },
+    "summarize_50|GLM-Flash": {
+      "ORA": 0.821,
+      "n": 28
+    },
+    "translate_es|GLM-Flash": {
+      "ORA": 0.0,
+      "n": 1
+    },
+    "rewrite_lay|GLM-Flash": {
+      "ORA": 1.0,
+      "n": 2
+    },
+    "regenerate|GLM-Flash": {
+      "ORA": 1.0,
+      "n": 2
+    }
+  }
+}
